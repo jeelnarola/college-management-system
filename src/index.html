@@ -8,18 +8,21 @@
   <title>R.V Patel College Management</title>
 </head>
 <body>
+
+   <!-- <div id="loginC"></div> -->
+   <div id="Login"></div>
     <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span class="sr-only">Open sidebar</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
         </svg>
      </button>
- <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+ <aside id="default-sidebar" class="fixed top-0 left-0 z-20 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
         <h1 class="uppercase tracking-widest text-2xl  text-gray-50 mt-5">admin panel</h1>
        <ul class="space-y-2 font-medium">
           <li>
-             <a href="#" class="mt-6 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+             <a href="../src/index.html" class="mt-6 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                 <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="" fill="currentColor" viewBox="0 0 22 21">
                    <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
                    <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
@@ -145,20 +148,99 @@
        </ul>
     </div>
  </aside>
- <section class="absolute left-64 bg-yellow-50 m-3 w-9/12">
-       <div class="p-3 flex justify-between">
-        <div>
-            <h5>Name : Jeel Narola</h5>
-            <h5>GRID : 1234567</h5>
-           </div>
-           <div>
-            <h5>Name : Jeel Narola</h5>
-            <h5>GRID : 1234567</h5>
-           </div>
-           </div>
-       </div>
-       
+ <section class="absolute left-64  w-9/12 top-0">
+    <section class=" bg-white drop-shadow-md">
+      <div class="p-3 flex justify-between">
+         <h4 class="text-blue-600 font-bold">College Management System</h4>
+    </section>
+    <section >
+          <div class="container">
+            <div class="grid grid-cols-4 gap-4 p-4">
+               <div>
+                  <div class="bg-red-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                     <div class="flex items-center space-x-4 justify-between">
+                       <h2 class="text-4xl font-bold">1</h2>
+                       <div class="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full">
+                         <!-- Icon for students -->
+                         <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z" />
+                         </svg>
+                       </div>
+                     </div>
+                     <p>Total Students</p>
+                     <a href="#" class="text-sm text-white mt-4 inline-flex items-center">
+                       More info
+                       <svg class="ml-1 w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="none">
+                         <path d="M12 0L9.58 1.58l7.4 7.4H0v2.04h16.98l-7.4 7.4L12 24l12-12z" />
+                       </svg>
+                     </a>
+                   </div>
+               </div>
+               <div>
+                 <!-- Card 2 -->
+                  <div class="bg-blue-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                     <div class="flex items-center space-x-4 justify-between">
+                        <h2 class="text-4xl font-bold">1</h2>
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full">
+                           <!-- Icon for staff -->
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17v-2a4 4 0 00-8 0v2m8 0a4 4 0 01-8 0v-2m8 0a4 4 0 10-8 0v2m-2 2h12" />
+                           </svg>
+                        </div>
+                     </div>
+                     <p>Total Staff</p>
+                     <a href="#" class="text-sm text-white mt-4 inline-flex items-center">
+                        More info
+                        <svg class="ml-1 w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="none">
+                           <path d="M12 0L9.58 1.58l7.4 7.4H0v2.04h16.98l-7.4 7.4L12 24l12-12z" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <div>
+                  <div class="bg-gray-700 text-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                     <div class="flex items-center space-x-4 justify-between">
+                        <h2 class="text-4xl font-bold">4</h2>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full">
+                           <!-- Icon for courses -->
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h10M7 16h10" />
+                           </svg>
+                        </div>
+                     </div>
+                     <p>Total Courses</p>
+                     <a href="#" class="text-sm text-white mt-4 inline-flex items-center">
+                        More info
+                        <svg class="ml-1 w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="none">
+                           <path d="M12 0L9.58 1.58l7.4 7.4H0v2.04h16.98l-7.4 7.4L12 24l12-12z" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <div>
+                  <div class="bg-pink-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                     <div class="flex items-center space-x-4 justify-between">
+                       <h2 class="text-4xl font-bold">4</h2>
+                       <div class="flex items-center justify-center w-16 h-16 bg-pink-600 rounded-full">
+                         <!-- Icon for subjects -->
+                         <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-7 4h8V4H6v16h2z" />
+                         </svg>
+                       </div>
+                     </div>
+                     <p>Total Subjects</p>
+                     <a href="#" class="text-sm text-white mt-4 inline-flex items-center">
+                       More info
+                       <svg class="ml-1 w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="none">
+                         <path d="M12 0L9.58 1.58l7.4 7.4H0v2.04h16.98l-7.4 7.4L12 24l12-12z" />
+                       </svg>
+                     </a>
+                   </div>
+               </div>
+            </div>
+         </div>
+       </section>
 </section>
-<script src="/src/Javascript/checkLogin.js"></script>
+<script type="module" src="checkLogin.js"></script>
 </body>
 </html>
