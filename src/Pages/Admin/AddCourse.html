@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+<body>
+    <div id="AdminHeader"></div>
+    <section class="absolute left-64  w-9/12 top-0">
+        <section class=" bg-white drop-shadow-md">
+          <div class="p-3 flex">
+             <h4 class="text-blue-600 font-bold cursor-pointer">Add Courses <span class="px-2">||</span> </h4>
+             <h4 class="text-blue-600 font-bold cursor-pointer">Mange Courses</h4>
+        </section>
+        <section >
+              <div id="h">
+               <div class="w-full m-2 p-1 bg-white drop-shadow-md pb-5">
+                  <div class="bg-black m-2 p-1">
+                     <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Add Course</h1>
+                  </div>
+                  <form action="">
+                     <div class="flex flex-col m-4">
+                        <label for="" class="mb-2">Course Name :</label>
+                        <input type="text" class="border border-black px-4">
+                     </div>
+                     <div class="flex flex-col m-4 relative">
+                        <label for="" class="mb-2">Session Name :</label>
+                        <p class="border border-black px-4 cursor-pointer" onclick="showHide()" id="ShowVal">Select Session Name</p>
+                        <div id="cMenu" class="w-full h-3" style="display: none;">
+                           <ul class="w-full h-32 cursor-pointer bg-slate-500 overflow-hidden overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300">
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA1</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA2</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA3</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA3</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA3</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA3</li>
+                              <li class="hover:bg-black hover:text-white" onclick="ValGet(this)">BCA3</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="flex flex-col m-4">
+                        <label for="" class="mb-2">Field Name :</label>
+                        <input type="text" class="border border-black px-4">
+                     </div>
+                     <input type="submit" value="Add Course" class="bg-blue-600 p-3 rounded-sm block mx-auto text-white hover:border hover:border-black hover:bg-transparent  hover:text-black hover:drop-shadow-2xl transition-all" >
+                  </form>
+               </div>
+             </div>
+         </section>
+    </section>
+</body>
+<script type="module" src="../../checkLogin.js"></script>
+<script src="../../Javascript/Admin/addCourse.JS"></script>
+</html>
