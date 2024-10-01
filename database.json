@@ -1,19 +1,13 @@
 {
-  "posts": [
+  "Course": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Cname": "BBA",
+      "id": 1
+    },
+    {
+      "Cname": "BBA",
+      "id": 2
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "Auth": []
 }

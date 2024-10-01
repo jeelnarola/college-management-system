@@ -6,9 +6,3 @@ const LoginValue = sessionStorage.getItem('Username')
 // if (LoginValue == null){
 //     document.getElementById("Login").innerHTML=Login()
 // }
-
-
-// popup 
-
-
-// export {popup}
