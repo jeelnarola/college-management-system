@@ -1,6 +1,4 @@
 import  {asideHeader, Login}  from "./Components/load.js";
-
-
 document.getElementById("AdminHeader").innerHTML=asideHeader()
 const LoginValue = sessionStorage.getItem('Username')
 
@@ -8,3 +6,9 @@ const LoginValue = sessionStorage.getItem('Username')
 // if (LoginValue == null){
 //     document.getElementById("Login").innerHTML=Login()
 // }
+
+
+// popup 
+
+
+// export {popup}
