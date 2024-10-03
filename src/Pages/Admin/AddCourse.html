@@ -12,11 +12,11 @@
     <section class="absolute left-64  w-9/12 top-0">
         <section class=" bg-white drop-shadow-md">
           <div class="p-3 flex">
-             <h4 class="text-blue-600 font-bold cursor-pointer">Add Courses <span class="px-2">||</span> </h4>
-             <h4 class="text-blue-600 font-bold cursor-pointer">Mange Courses</h4>
+             <h4 class="text-blue-600 font-bold cursor-pointer" id="AddCourse">Add Courses <span class="px-2">||</span> </h4>
+             <h4 class="text-blue-600 font-bold cursor-pointer" id="MangeCourse">Mange Courses</h4>
         </section>
         <section >
-              <div id="h">
+              <div id="showHideCourse">
                <div class="w-full m-2 p-1 bg-white drop-shadow-md pb-5">
                   <div class="bg-black m-2 p-1">
                      <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Add Course</h1>
@@ -43,8 +43,30 @@
                      <input type="submit" value="Add Course" class="bg-blue-600 p-3 rounded-sm block mx-auto text-white hover:border hover:border-black hover:bg-transparent  hover:text-black hover:drop-shadow-2xl transition-all cursor-pointer" >
                   </form>
                </div>
-             </div>
+              </div>
+              <div id="showHideMangeCourse" style="display: none;">
+                 <div class="w-full m-2 p-1 bg-white drop-shadow-md pb-5">
+                    <div class="bg-black m-2 p-1">
+                       <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Mange Course</h1>
+                    </div>
+                    <table class="table-auto border border-black w-11/12 m-9 my-0 mt-5">
+                       <thead >
+                          <tr >
+                             <th class="border border-black">No.</th>
+                             <th class="border border-black">Course Name</th>
+                             <th class="border border-black">Action</th>
+                          </tr>
+                       </thead>
+                       <tbody id="showCourse">
+
+                       </tbody>
+                    </table>
+                 </div>
+              </div>
+            </div>
          </section>
+      <!-- mange a course -->
+      
       </section>
       <!-- </div> -->
 </body>

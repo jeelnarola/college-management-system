@@ -4,6 +4,7 @@
 // function jeel(){
 // alert("l")
 // }
+// import { document } from "postcss/lib/postcss";
 import { popup } from "../../popup.js";
 
 // all select in course
@@ -59,6 +60,47 @@ document.getElementById("addCourseForm").addEventListener("submit",(e)=>{
           popup()
         })
     }
-
-
 })
+
+document.getElementById("MangeCourse").addEventListener("click",(e)=>{
+  e.preventDefault()
+  document.getElementById("showHideMangeCourse").style.display='block';
+  document.getElementById("showHideCourse").style.display='none';
+})
+document.getElementById("AddCourse").addEventListener("click",(e)=>{
+  e.preventDefault()
+  document.getElementById("showHideMangeCourse").style.display='none';
+  document.getElementById("showHideCourse").style.display='block';
+})
+const showMange=(data)=>{
+  data.map((ele,index)=>{
+    console.log(index)
+    let tr=document.createElement('tr')
+    let Cno=document.createElement("td")
+    Cno.setAttribute('class','border border-black pl-3')
+    Cno.innerHTML=index+1
+    let Cname = document.createElement("td")
+    Cname.setAttribute("class","border border-black pl-3")
+    Cname.innerHTML=ele.Cname
+    let actiontd=document.createElement("td")
+    actiontd.setAttribute("class","m-2 border border-black pl-3")
+    let editbtn = document.createElement("button")
+    editbtn.innerHTML='Edit'
+    editbtn.setAttribute("class","border border-black p-3 btn bg-blue-600 m-2 pointer")
+    let delbtn = document.createElement("button")
+    delbtn.innerHTML='Delete'
+    delbtn.setAttribute("class","border border-black p-3 btn bg-red-600 pointer")
+    actiontd.append(editbtn,delbtn)
+    tr.append(Cno,Cname,actiontd)
+    document.getElementById("showCourse").append(tr)
+    
+  })
+}
+const get=()=>{
+  fetch("http://localhost:3000/Course")
+  .then((res)=>res.json())
+  .then((data)=>{
+    showMange(data)
+  })
+}
+get()
