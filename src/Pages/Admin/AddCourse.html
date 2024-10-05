@@ -7,69 +7,61 @@
     <link rel="stylesheet" href="../../output.css">
 </head>
 <body>
-    <div id="AdminHeader"></div>
-    <div id="tostBox" class="absolute bottom-7 right-7 flex align-middle flex-col p-5"></div>
-    <section class="absolute left-64  w-9/12 top-0">
-        <section class=" bg-white drop-shadow-md">
-          <div class="p-3 flex">
-             <h4 class="text-blue-600 font-bold cursor-pointer" id="AddCourse">Add Courses <span class="px-2">||</span> </h4>
-             <h4 class="text-blue-600 font-bold cursor-pointer" id="MangeCourse">Mange Courses</h4>
-        </section>
-        <section >
-              <div id="showHideCourse">
-               <div class="w-full m-2 p-1 bg-white drop-shadow-md pb-5">
-                  <div class="bg-black m-2 p-1">
-                     <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Add Course</h1>
+   <section>
+      <div class="w-full flex flex-nowrap ">
+         <div id="AdminHeader" class="w-1/5 h-screen overflow-auto bg-gray-50 dark:bg-gray-800"></div>
+         <div class="w-4/5">
+            <div class=" bg-white drop-shadow-md">
+               <div class="p-3 flex justify-between">
+                  <h4 class="text-blue-600 font-bold">College Management System</h4>
+                  <ul class="flex">
+                     <li class="pl-3 text-blue-600 cursor-pointer" id="AddCourse" >Add Course</li>
+                     <li class="pl-3 text-blue-600">||</li>
+                     <li class="pl-3 text-blue-600 cursor-pointer" id="MangeCourse" >Mange Course</li>  
+                  </ul>
+               </div>
+           </div>
+            <div id="showHideCourse" >
+               <div class="w-11/12 m-2 mx-auto mt-7 bg-white drop-shadow-md pb-5">
+                  <div class="bg-black p-2">
+                     
+                     <h1 class="text-white font-semibold tracking-widest uppercase" id="AddCourseTitle">Add Course</h1>
                   </div>
                   <form action="" id="addCourseForm">
                      <div class="flex flex-col m-4">
                         <label for="" class="mb-2">Course Name :</label>
-                        <input type="text" class="border border-black px-4" id="courseName" name="Cname">
+                        <input type="text" class="border border-black px-4 mb-4" id="courseName" name="Cname">
+                        <input type="submit" value="Add Course" class="bg-blue-600 p-3 rounded-sm block mx-auto text-white hover:border hover:border-black hover:bg-transparent  hover:text-black hover:drop-shadow-2xl transition-all cursor-pointer" id="addCoursebtn">
                      </div>
-                     <!-- <div class="flex flex-col m-4 relative">
-                        <label for="" class="mb-2">Session Name :</label>
-                        <p class="border border-black px-4 cursor-pointer" id="ShowVal">Select Session Name</p>
-                        <div id="cMenu" class="w-full h-3" style="display: none;">
-                           <ul class="w-full h-32 cursor-pointer p-2 bg-slate-300 overflow-hidden overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300" id="ul">
-                              <li class="hover:bg-black hover:rounded-md p-1 hover:text-white">Winter BCA</li>
-                              <li class="hover:bg-black hover:rounded-md p-1 hover:text-white">Regular BCA</li>
-                              <li class="hover:bg-black p-1 hover:rounded-md hover:text-white">BBA</li>
-                              <li class="hover:bg-black p-1  hover:rounded-md hover:text-white">BCom</li>
-                              <li class="hover:bg-black p-1 hover:rounded-md  hover:text-white">Bsc IT</li>
-                              <li class="hover:bg-black p-1 hover:rounded-md hover:text-white">Data Science</li>
-                          </ul>
-                        </div>
-                     </div> -->
-                     <input type="submit" value="Add Course" class="bg-blue-600 p-3 rounded-sm block mx-auto text-white hover:border hover:border-black hover:bg-transparent  hover:text-black hover:drop-shadow-2xl transition-all cursor-pointer" >
                   </form>
                </div>
-              </div>
-              <div id="showHideMangeCourse" style="display: none;">
-                 <div class="w-full m-2 p-1 bg-white drop-shadow-md pb-5">
-                    <div class="bg-black m-2 p-1">
-                       <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Mange Course</h1>
-                    </div>
-                    <table class="table-auto border border-black w-11/12 m-9 my-0 mt-5">
-                       <thead >
-                          <tr >
-                             <th class="border border-black">No.</th>
-                             <th class="border border-black">Course Name</th>
-                             <th class="border border-black">Action</th>
-                          </tr>
-                       </thead>
-                       <tbody id="showCourse">
-
-                       </tbody>
-                    </table>
-                 </div>
-              </div>
             </div>
-         </section>
-      <!-- mange a course -->
-      
-      </section>
+            <div id="showHideMangeCourse"style="display: none;">
+               <div class="w-11/12 m-2 mx-auto mt-7 bg-white drop-shadow-md pb-5">
+                  <div class="bg-black p-2">
+                     <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Mange Course</h1>
+                  </div>
+                  <table class="table-auto border border-black w-11/12 m-9 my-0 mt-5">
+                     <thead >
+                        <tr >
+                           <th class="border border-black">No.</th>
+                           <th class="border border-black">Course Name</th>
+                           <th class="border border-black">Action</th>
+                        </tr>
+                     </thead>
+                     <tbody id="showCourse">
+
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+  </section>
+    <div id="tostBox" class="absolute bottom-7 right-7 flex align-middle flex-col p-5"></div>
+   
       <!-- </div> -->
 </body>
 <script type="module" src="../../checkLogin.js"></script>
+<script type="module" src="../../CURD.JS"></script>
 <script type="module" src="../../Javascript/Admin/addCourse.JS"></script>
 </html> 
