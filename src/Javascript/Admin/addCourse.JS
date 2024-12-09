@@ -1,6 +1,8 @@
-import { DeletAPI } from "../../CURD.JS";
-import { popup } from "../../popup.js";
-
+import { TitleHeader } from "../../Components/load.js";
+import { DeletAPI,EditAPI,GetAPI,PostAPI } from "../../Services/APIServices.JS";
+if(!(headerTitle==null)){
+  document.getElementById("headerTitle").innerHTML=TitleHeader('College Management System',"Course management","Add Course","Manage Course")
+}
 // all select in course
 // let divMenu=document.getElementById("cMenu")
 // let ShowVal=document.getElementById("ShowVal")
@@ -45,30 +47,14 @@ document.getElementById("addCourseForm").addEventListener("submit", (e) => {
       let data = {
         Cname: document.getElementById("courseName").value,
       };
-
-      fetch(`http://localhost:3000/Course/${id}`, {
-        method: "PATCH",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
-      }).catch((error) => {
-        console.log(error);
-      });
+      EditAPI('/Course',id,data)
     }
   } else {
     if (courseNamevalue !== "") {
       let data = {
         Cname: document.getElementById("courseName").value,
       };
-
-      fetch("http://localhost:3000/Course", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((Done) => {
-          popup();
-        });
+      PostAPI('/Course',data)
     }
   }
 });
@@ -78,6 +64,7 @@ document.getElementById("MangeCourse").addEventListener("click", (e) => {
   document.getElementById("showHideMangeCourse").style.display = "block";
   document.getElementById("showHideCourse").style.display = "none";
 });
+
 document.getElementById("AddCourse").addEventListener("click", (e) => {
   e.preventDefault();
   document.getElementById("showHideMangeCourse").style.display = "none";
@@ -85,6 +72,7 @@ document.getElementById("AddCourse").addEventListener("click", (e) => {
   document.getElementById("addCoursebtn").value = "Add Course";
   document.getElementById("AddCourseTitle").innerHTML = "Add Course";
 });
+
 const showMange = (data) => {
   data.map((ele, index) => {
     console.log(index);
@@ -118,18 +106,16 @@ const showMange = (data) => {
       "border border-black p-3 btn bg-red-600 pointer"
     );
     delbtn.addEventListener("click", (e) => {
-      DeletAPI(ele.id);
+      DeletAPI('/Course',ele.id);
     });
     actiontd.append(editbtn, delbtn);
     tr.append(Cno, Cname, actiontd);
     document.getElementById("showCourse").append(tr);
   });
 };
-const get = () => {
-  fetch("http://localhost:3000/Course")
-    .then((res) => res.json())
-    .then((data) => {
-      showMange(data);
-    });
+
+const get = async() => {
+  let data = await GetAPI('/Course')
+  showMange(data);
 };
 get();

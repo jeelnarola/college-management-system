@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Course Management</title>
+    <link rel="shortcut icon" href="../../../src/Images/favico/college.png" type="image/x-icon">
     <link rel="stylesheet" href="../../output.css">
 </head>
 <body>
    <section>
-      <div class="w-full flex flex-nowrap ">
+      <div class="w-full flex flex-nowrap">
          <div id="AdminHeader" class="w-1/5 h-screen overflow-auto bg-gray-50 dark:bg-gray-800"></div>
          <div class="w-4/5">
-            <div class=" bg-white drop-shadow-md">
-               <div class="p-3 flex justify-between">
-                  <h4 class="text-blue-600 font-bold">College Management System</h4>
-                  <ul class="flex">
-                     <li class="pl-3 text-blue-600 cursor-pointer" id="AddCourse" >Add Course</li>
-                     <li class="pl-3 text-blue-600">||</li>
-                     <li class="pl-3 text-blue-600 cursor-pointer" id="MangeCourse" >Mange Course</li>  
-                  </ul>
-               </div>
-           </div>
+            <div id="headerTitle"></div>
             <div id="showHideCourse" >
                <div class="w-11/12 m-2 mx-auto mt-7 bg-white drop-shadow-md pb-5">
                   <div class="bg-black p-2">
@@ -61,7 +53,6 @@
    
       <!-- </div> -->
 </body>
-<script type="module" src="../../checkLogin.js"></script>
-<script type="module" src="../../CURD.JS"></script>
+<script type="module" src="../../Services/componetRender.js"></script>
 <script type="module" src="../../Javascript/Admin/addCourse.JS"></script>
 </html> 

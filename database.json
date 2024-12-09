@@ -1,20 +1,16 @@
 {
-  "Auth":[
+  "Auth": [
     {
-      "AuthName":"jeelnarola@gmail.com",
-      "password":"jeelnarola",
-      "role":"Admin"
+      "AuthName": "jeelnarola@gmail.com",
+      "password": "jeelnarola",
+      "role": "Admin",
+      "id": "d1db"
     }
   ],
   "Course": [
     {
-      "Cname": "Bca",
-      "id": 5
-    },
-    {
-      "Cname": "Bcom",
-      "id": 6
+      "id": "48b0",
+      "Cname": "BCA"
     }
-  ],
-  "Auth": []
+  ]
 }
