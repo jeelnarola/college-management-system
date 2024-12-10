@@ -9,7 +9,17 @@
   ],
   "Course": [
     {
-      "id": "48b0",
+      "id": "1d41",
+      "Cname": "BCA"
+    }
+  ],
+  "Subject": [],
+  "staff": [
+    {
+      "id": "eaaf",
+      "name": "narola",
+      "email": "narolajeel29@gmail.com",
+      "gender": "Male",
       "Cname": "BCA"
     }
   ]

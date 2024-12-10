@@ -1,7 +1,6 @@
 
 const FixedUrl='http://localhost:3000'
 export const PostAPI = (url,data) => {
-    console.log("url",url," ","data",data)
     if(data){
         fetch(`${FixedUrl}${url}`,{
             method:"POST",
@@ -15,7 +14,6 @@ export const GetAPI = (url)=>{
     return fetch(`${FixedUrl}${url}`)
     .then((res)=>res.json())
     .then((data)=>{
-        console.log("data2",data)
         return data;
     })
 }
@@ -40,5 +38,23 @@ export const EditAPI = (url,id,data)=>{
             body:JSON.stringify(data)
         })
     }
+}
+
+export const DropDownMenu = (data) =>{
+    document.getElementById("DropDwon").innerHTML=''
+  if(!data || data.length === 0 ){
+    let setOption1 = document.createElement('option')
+    setOption1.innerHTML = 'No Course Available...'
+    document.getElementById("DropDwon").append(setOption1)
+  }
+  else{
+  data.map((ele)=>{
+      let setOption1 = document.createElement('option')
+      setOption1.innerHTML = ''
+      let setOption = document.createElement('option')
+      setOption.innerHTML = ele.Cname
+      document.getElementById("DropDwon").append(setOption1,setOption)
+    })
+  }
 }
 
