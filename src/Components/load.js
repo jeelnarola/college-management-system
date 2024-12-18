@@ -166,9 +166,9 @@ const TitleHeader = (title,title2,title3,title4) =>{
         <h4 class="text-blue-600 font-bold">${title}</h4>
         <h2>${title2}</h2>
         <ul class="flex">
-            ${title3 ? `<li class="pl-3 text-blue-600 cursor-pointer" id="AddCourse">${title3}</li> `: ' '}
+            ${title3 ? `<li class="pl-3 text-blue-600 cursor-pointer" id="Add">${title3}</li> `: ' '}
             ${title3 && title4 ? ` <li class="pl-3 text-blue-600">||</li>` : ' '}
-            ${title4 ? `<li class="pl-3 text-blue-600 cursor-pointer" id="MangeCourse" >${title4}</li>` : ' '}
+            ${title4 ? `<li class="pl-3 text-blue-600 cursor-pointer" id="Mange" >${title4}</li>` : ' '}
         </ul>
      </div>
    </div>

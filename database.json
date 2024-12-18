@@ -9,18 +9,70 @@
   ],
   "Course": [
     {
-      "id": "1d41",
-      "Cname": "BCA"
+      "id": "d29c",
+      "Course": "Bcom1"
+    },
+    {
+      "id": "b740",
+      "Course": "BCA"
+    },
+    {
+      "id": "add6",
+      "Course": "bca"
+    },
+    {
+      "id": "f74a",
+      "Course": "BBA"
+    },
+    {
+      "id": "efb2",
+      "Course": "asd"
     }
   ],
-  "Subject": [],
+  "Subject": [
+    {
+      "id": "626b",
+      "Sname": "Account",
+      "Staff": "Narola Meet",
+      "Course": "Bcom"
+    },
+    {
+      "id": "f460",
+      "Sname": "C++",
+      "Staff": "Narola Jeel Sanjaybhai",
+      "Course": "BCA"
+    },
+    {
+      "id": "c58e",
+      "Sname": "C",
+      "Staff": "vishakha Barot",
+      "Course": "BCA"
+    }
+  ],
   "staff": [
     {
-      "id": "eaaf",
-      "name": "narola",
+      "id": "bfb2",
+      "name": "Narola Jeel Sanjaybhai",
       "email": "narolajeel29@gmail.com",
       "gender": "Male",
-      "Cname": "BCA"
+      "Course": "asd",
+      "phoneNo": "8980672209"
+    },
+    {
+      "id": "e46d",
+      "name": "Narola Meet",
+      "email": "narolajeel29@gmail.com",
+      "gender": "Male",
+      "Course": "Bcom",
+      "phoneNo": "8980672209"
+    },
+    {
+      "id": "7f36",
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "gender": "Female",
+      "Course": "bca",
+      "phoneNo": "1234567890"
     }
   ]
 }

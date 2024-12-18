@@ -30,7 +30,7 @@ if(!(headerTitle==null)){
 //     }
 // })
 // all select in course
-let id = 0;
+let id = null;
 document.getElementById("addCourseForm").addEventListener("submit", (e) => {
   e.preventDefault();
   let courseNamevalue = document.getElementById("courseName").value;
@@ -45,27 +45,27 @@ document.getElementById("addCourseForm").addEventListener("submit", (e) => {
   if (valuebtn == "Update") {
     if (courseNamevalue !== "") {
       let data = {
-        Cname: document.getElementById("courseName").value,
+        Course: document.getElementById("courseName").value,
       };
       EditAPI('/Course',id,data)
     }
   } else {
     if (courseNamevalue !== "") {
       let data = {
-        Cname: document.getElementById("courseName").value,
+        Course: document.getElementById("courseName").value,
       };
       PostAPI('/Course',data)
     }
   }
 });
 
-document.getElementById("MangeCourse").addEventListener("click", (e) => {
+document.getElementById("Mange").addEventListener("click", (e) => {
   e.preventDefault();
   document.getElementById("showHideMangeCourse").style.display = "block";
   document.getElementById("showHideCourse").style.display = "none";
 });
 
-document.getElementById("AddCourse").addEventListener("click", (e) => {
+document.getElementById("Add").addEventListener("click", (e) => {
   e.preventDefault();
   document.getElementById("showHideMangeCourse").style.display = "none";
   document.getElementById("showHideCourse").style.display = "block";
@@ -82,7 +82,7 @@ const showMange = (data) => {
     Cno.innerHTML = index + 1;
     let Cname = document.createElement("td");
     Cname.setAttribute("class", "border border-black pl-3");
-    Cname.innerHTML = ele.Cname;
+    Cname.innerHTML = ele.Course;
     let actiontd = document.createElement("td");
     actiontd.setAttribute("class", "m-2 border border-black pl-3");
     let editbtn = document.createElement("button");
@@ -97,7 +97,7 @@ const showMange = (data) => {
       document.getElementById("addCoursebtn").value = "Update";
       document.getElementById("showHideMangeCourse").style.display = "none";
       document.getElementById("showHideCourse").style.display = "block";
-      document.getElementById("courseName").value = ele.Cname;
+      document.getElementById("courseName").value = ele.Course;
     });
     let delbtn = document.createElement("button");
     delbtn.innerHTML = "Delete";
