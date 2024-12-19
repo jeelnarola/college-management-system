@@ -37,7 +37,9 @@ SubjectFrom.addEventListener("submit", async (e) => {
     EditAPI('/Subject',id,SubjectData)
     id=null;
   }else{
+    
     await PostAPI('/Subject', SubjectData)
+    
   }
 })
 document.getElementById("DropDwonStaff").addEventListener("change", async function () {
