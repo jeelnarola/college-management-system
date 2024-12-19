@@ -3,7 +3,6 @@ import { EditAPI } from "../../Services/APIServices.JS";
 import { DropDownMenu } from "../../Services/APIServices.JS";
 import { GetAPI , PostAPI} from "../../Services/APIServices.JS";
 let sessionData = sessionStorage.getItem("staffManageUpdateID")
-console.log(sessionData)
 if(!(headerTitle==null)){
     document.getElementById("headerTitle").innerHTML=TitleHeader('College Management System',"Add A Staff")
 }
@@ -21,6 +20,7 @@ if(sessionData){
             }
         })
     }
+    sessionStorage.clear()
     getData()
 }else{
     document.getElementById("addCoursebtn").value = "Add Course"
