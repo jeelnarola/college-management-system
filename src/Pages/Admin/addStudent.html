@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+<body>
+    <section>
+        <div class="w-full flex flex-nowrap ">
+            <div id="AdminHeader" class="w-1/5 h-screen overflow-auto bg-gray-50 dark:bg-gray-800"></div>
+            <div class="w-4/5">
+                <div id="headerTitle"></div>
+                <div class="w-11/12 m-2 mx-auto mt-7 bg-white drop-shadow-md pb-5">
+                    <form action="" id="addStudentForm">
+                       <div class="flex flex-col m-4">
+                          <label for="" class="mb-2">Student Name :</label>
+                          <input type="text" class="border border-black px-4 mb-4" id="name" name="name">
+                          <label for="" class="mb-2">Email :</label>
+                          <input type="email" class="border border-black px-4 mb-4" id="email" name="email">
+                          <label for="" class="mb-2">Phone No :</label>
+                          <input type="tel" maxlength="10" minlength="10" class="border border-black px-4 mb-4" id="phone" name="phoneNo">
+                          <label for="" class="mb-2">BOD :</label>
+                          <input type="date" class="border border-black px-4 mb-4" id="BOD" name="BOD">
+                         <samp class="mb-4">
+                             <label for="" class="mb-2 p-2">Gender :</label>
+                             <input type="radio" name="gender" class="gender" value="Male"><label for="" class="m-2">Male</label>
+                             <input type="radio" name="gender" class="gender" value="Female"><label for="" class="m-2">Female</label>
+                         </samp>
+                         <label for="" class="mb-2">Course Name :</label>
+                         <select name="" class="border border-black" id="DropDwon" name="Course">
+                             
+                         </select>
+                          <input type="submit" value="Add Course" class="bg-blue-600 p-3 rounded-sm block mx-auto text-white hover:border hover:border-black hover:bg-transparent  hover:text-black hover:drop-shadow-2xl transition-all cursor-pointer mt-6" id="addCoursebtn">
+                       </div>
+                    </form>
+                 </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module" src="../../Services/componetRender.js"></script>
+<script type="module" src="../../Javascript/Admin/addStudent.js"></script>
+</html>

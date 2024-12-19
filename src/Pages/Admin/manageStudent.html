@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+<body>
+    <section>
+        <div class="w-full flex flex-nowrap">
+            <div id="AdminHeader" class="w-1/5 h-screen overflow-auto bg-gray-50 dark:bg-gray-800"></div>
+            <div class="w-4/5">
+                <div id="headerTitle"></div>
+                <div class="w-11/12 m-2 mx-auto mt-7 bg-white drop-shadow-md pb-5">
+                    <div class="bg-black p-2">
+                       <h1 class="text-white font-semibold pl-3 tracking-widest uppercase">Mange Course</h1>
+                    </div>
+                    <table class="table-auto border border-black w-11/12 m-9 my-0 mt-5">
+                       <thead >
+                          <tr >
+                             <th class="border border-black">No.</th>
+                             <th class="border border-black">Name</th>
+                             <th class="border border-black">email</th>
+                             <th class="border border-black">Phone No.</th>
+                             <th class="border border-black">gender</th>
+                             <th class="border border-black">BOD</th>
+                             <th class="border border-black">Course</th>
+                             <th class="border border-black">Action</th>
+                          </tr>
+                       </thead>
+                       <tbody id="showStaff">
+  
+                       </tbody>
+                    </table>
+                 </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+<script type="module" src="../../Services/componetRender.js"></script>
+<script type="module" src="../../Javascript/Admin/manageStudent.js"></script>
+</html>
